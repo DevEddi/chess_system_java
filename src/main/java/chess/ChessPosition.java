@@ -26,7 +26,7 @@ public class ChessPosition {
     }
 
     protected Position toPosotion(){
-        
+
     }
 
 }
