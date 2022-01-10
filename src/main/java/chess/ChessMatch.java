@@ -66,7 +66,11 @@ public class ChessMatch {
         if(!board.thereIsAPiece(position)){
             throw  new ChessException("There us no piece on source position");
         }
+        if(currentPlayer != ((ChessPiece)board.piece(position)).getColor()){
+            throw new ChessException("The chosen piece is not yours ");
+        }
         if(!board.piece(position).isThereAnyPossibleMovie()){
+
             throw new ChessException("There is no possible mover for the chose piece");
         }
     }
